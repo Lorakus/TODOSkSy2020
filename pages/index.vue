@@ -6,7 +6,7 @@
         Skalierbare-Systeme_HA1
       </h1>
       <h2 class="subtitle">
-        
+        HA1
       </h2>
       <div class="links">
         <a
