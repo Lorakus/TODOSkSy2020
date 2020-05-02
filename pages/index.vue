@@ -4,7 +4,7 @@
 
 
 
-  <div>
+  <div class="bg-blue-200">
     TODO list
   </div>
 </template>
