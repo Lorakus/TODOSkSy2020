@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-verdigris  min-h-full pt-1 pb-2">
+  <div class=" min-h-screen bg-verdigris pt-1 pb-2">
     
     <Title title="TODO List"/>
 
 
-    <div class="sm:w-max-400px m-auto mb-8">
+    <div class="sm:w-max-400px m-auto mb-24">
       <!-- add new TODO input -->
       <div class="flex mt-6 mx-10 mb-12">
         <input type="text" placeholder="New TODO" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
@@ -20,13 +20,7 @@
       <Todo todo_name="test 4" time="2h"/>
       <Todo todo_name="test 4" time="2h"/>
       <Todo todo_name="test 4" time="2h"/>
-      <Todo todo_name="test 4" time="2h"/>
-      <Todo todo_name="test 4" time="2h"/>
-      <Todo todo_name="test 4" time="2h"/>
-      <Todo todo_name="test 4" time="2h"/>
-      <Todo todo_name="test 4" time="2h"/>
-      <Todo todo_name="test 4" time="2h"/>
-      <Todo todo_name="test 4" time="2h"/>
+
       
     </div>
   </div>
