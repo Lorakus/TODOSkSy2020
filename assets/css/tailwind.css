@@ -10,3 +10,18 @@
 .h-80pro{
     height: 80vh;
 }
+
+.focus\:shadow-outline-arctic-lime:focus {
+    box-shadow: 0 0 0 3px #CEFF1A;
+  }
+
+  .w-400px{
+      width: 400px;
+  }
+
+  @media (min-width: 640px) {
+    .sm\:w-max-400px {
+        width: 600px;
+    }
+}
+
