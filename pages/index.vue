@@ -16,15 +16,7 @@
           <Todo todo_name="test 2" time="60min"/>
           <Todo todo_name="test 3" time="15min"/>
           <Todo todo_name="test 4" time="2h"/>
-          <Todo todo_name="test 5" time="25h"/>
-                    <Todo todo_name="test 5" time="25h"/>
 
-          <Todo todo_name="test 5" time="25h"/>
-          <Todo todo_name="test 5" time="25h"/>
-          <Todo todo_name="test 5" time="25h"/>
-          <Todo todo_name="test 5" time="25h"/>
-          <Todo todo_name="test 5" time="25h"/>
-          <Todo todo_name="test 5" time="25h"/>
 
 
         </div>
