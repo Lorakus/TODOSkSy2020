@@ -2,8 +2,7 @@
     <div class=" h-screen bg-verdigris">
       <div class="bg-verdigris py-6">
 
-
-          <h1 class="text-arctic-lime font-bold text-center mt-10 text-5xl">Add New TODO</h1>
+          <Title title="Add New TODO"/>
 
         <div class="sm:w-max-400px m-auto">
            <div class="mt-6 mx-10 flex">
@@ -19,3 +18,15 @@
         </div>
     </div>
 </template>
+
+
+<script>
+import Title from '@/components/Title';
+
+export default {
+    components:{
+        Title
+    }
+    
+}
+</script>
