@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="bottom-auto" >
     <div class="bg-pale-cerulean flex justify-around text-center shadow-lg">
 
         <div class="flex flex-col items-center py-2  ">
