@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-verdigris">
+  <div class="">
     <NormalNavbar class="hidden md:grid" />
     <nuxt />
     <MobileNavbar class="md:hidden absolute bottom-0 w-full"/>
