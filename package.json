@@ -11,8 +11,9 @@
     "start": "nuxt-ts start"
   },
   "dependencies": {
+    "@nuxt/typescript-runtime": "^0.4.0",
     "nuxt": "^2.0.0",
-    "@nuxt/typescript-runtime": "^0.4.0"
+    "tailwindcss": "^1.4.4"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
