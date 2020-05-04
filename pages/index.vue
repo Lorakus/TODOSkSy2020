@@ -1,14 +1,15 @@
 <template>
   <div class=" min-h-screen bg-verdigris pt-1 pb-2">
     
-    <Title title="TODO List"/>
+    <Title title="TODO List" class=""/>
 
 
     <div class="sm:w-max-400px m-auto mb-24">
       <!-- add new TODO input -->
       <div class="flex mt-6 mx-10 mb-12">
         <input type="text" placeholder="New TODO" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
-        <button class="bg-pale-cerulean hover:bg-oxford-blue text-arctic-lime  hover:text-flame rounded uppercase py-2 px-6 appearance-none focus:outline-none transform duration-500">
+        <input type="text" placeholder="Needed time"  class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2"/>
+        <button class="bg-pale-cerulean hover:bg-blue-500 text-arctic-lime  hover:text-black rounded uppercase py-2 px-6 appearance-none focus:outline-none transform duration-500">
           add
         </button>
       </div>
