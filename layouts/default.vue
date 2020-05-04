@@ -1,8 +1,8 @@
 <template>
-  <div class="">
+  <div class="bg-verdigris" >
     <NormalNavbar class="hidden md:grid" />
     <nuxt />
-    <MobileNavbar class="md:hidden absolute bottom-0 w-full"/>
+    <MobileNavbar class="md:hidden absolute bottom-0 w-full" style="position: fixed; bottom: 0px" />
   </div>
 </template>
 
