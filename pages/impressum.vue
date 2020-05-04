@@ -1,8 +1,8 @@
 <template>
-    <div class="" style="height: 88vh;">
+    <div style="height: 88vh;">
         <div>
-            <h1 class="text-center m-2 font-semibold">Welcome!</h1>
-            <h2 class="m-2">This page was created by: </h2>
+            <h1 class="text-center m-2 font-semibold sm:text-xl md:text-2xl">Welcome!</h1>
+            <h2 class="m-2 md:text-2xl sm:text-xl xl:ml-8">This page was created by: </h2>
         </div>
         <div class="flex flex-col content-center content-around">
             <!-- rounded dzila tylko poza komponentem, nie wiem czemu -->
