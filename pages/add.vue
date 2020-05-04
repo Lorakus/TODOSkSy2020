@@ -1,5 +1,5 @@
 <template>
-    <div class=" h-screen bg-verdigris">
+    <div class="bg-verdigris h-screen">
       <div class="bg-verdigris py-6">
 
           <Title title="Add New TODO"/>
@@ -12,9 +12,8 @@
             </button>
           </div>
 
-         
         </div>
-         
+    
         </div>
     </div>
 </template>

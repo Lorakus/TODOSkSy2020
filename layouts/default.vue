@@ -1,8 +1,8 @@
 <template>
-  <div class="">
+  <div class="bg-verdigris">
+    <MobileNavbar id="mobile-navbar" class="md:hidden w-full bottom-0"/>
     <NormalNavbar class="hidden md:grid" />
-    <nuxt />
-    <MobileNavbar class="md:hidden absolute bottom-0 w-full"/>
+    <nuxt/>
   </div>
 </template>
 
@@ -23,4 +23,18 @@ export default {
   },
 }
 </script>
+
+<style>
+
+#mobile-nabar{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  box-sizing: border-box;
+}
+
+</style>
 
