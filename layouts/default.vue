@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <NormalNavbar class="hidden md:block" />
+    <NormalNavbar class="hidden md:grid" />
     <nuxt />
     <MobileNavbar class="md:hidden bottom-0 absolute w-full"/>
   </div>

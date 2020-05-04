@@ -1,23 +1,13 @@
 <template>
 
-    <div class="bg-gray-200 text-gray-900 flex-row">
 
-        <div>
+    <div class="grid grid-col-6">
+        <div class="grid col-start-1 col-end-2">
             <nuxt-link to="/" class="bg-red-500">Home </nuxt-link>
         </div>
 
-        <div>
+        <div class="grid col-start-7 col-end-7">
             <nuxt-link to="/add">Add</nuxt-link>
-
-        </div>
-
-        <div>
-            <nuxt-link to="/edit" class="bg-red-500">Edit</nuxt-link>
-
-        </div>
-
-        <div>
-            <nuxt-link to="/impressum">About</nuxt-link>
         </div>
     </div>
 
