@@ -1,8 +1,8 @@
 <template>
-  <div class="">
+  <div class="overflow-scroll bg-verdigris">
     <NormalNavbar class="hidden md:grid" />
     <nuxt />
-    <MobileNavbar class="md:hidden bottom-0 absolute w-full"/>
+    <MobileNavbar class="md:hidden bottom-auto sm:bottom-0 absolute w-full"/>
   </div>
 </template>
 

@@ -1,6 +1,5 @@
 <template>
-    <div class="h-screen bg-verdigris">
-      <div class="bg-verdigris py-6">
+      <div class="bg-verdigris h-screen pt-1 pb-4 sm:pb-0">
 
         <Title title="TODO List"/>
         <!-- <h1 class="text-arctic-lime font-bold text-center mt-10 text-5xl">TODO List</h1> -->
@@ -13,18 +12,14 @@
               add
             </button>
           </div>
-          
+
           <Todo todo_name="test 1" time="30min"/>
           <Todo todo_name="test 2" time="60min"/>
           <Todo todo_name="test 3" time="15min"/>
           <Todo todo_name="test 4" time="2h"/>
           <Todo todo_name="test 5" time="25h"/>
-
-
         </div>
-        
       </div>
-    </div>
 </template>
 
 
