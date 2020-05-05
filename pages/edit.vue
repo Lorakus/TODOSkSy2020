@@ -8,7 +8,7 @@
         <br>
     </div>
     <!-- Edit text -->
-    <div class="flex flex-col sm:items-center md:w-full">
+    <div class="flex flex-col sm:items-center ">
         <InputComp  placeholderText="Edit TODO text">
             <p > TODO text </p>
         </InputComp>
