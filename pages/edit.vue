@@ -1,7 +1,7 @@
 <template>
 <div >
     <!-- Edit TODO number # -->
-    <div>
+    <div class="text-center font-bold mt-2">
         Edit TODO #
         <br>
         <br>

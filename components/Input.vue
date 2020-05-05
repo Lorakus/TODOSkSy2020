@@ -6,7 +6,7 @@
                 <slot/>
             </label>
         </div>
-      <input class=" bg-gray-200  border rounded w-full py-2 px-3 md:h-16" :placeholder = "placeholderText" >
+      <input class=" bg-gray-200  border rounded w-full py-2 px-3 sm:h-16" :placeholder = "placeholderText" >
       
     </div>
 </div>
