@@ -8,28 +8,28 @@
         <br>
     </div>
     <!-- Edit text -->
-    <Input>
-        <p> TODO text </p>
-    </Input>
+    <InputComp>
+        <p > TODO text </p>
+    </InputComp>
 
     <!-- Edit TODO deadline -->
-    <Input>
+    <InputComp>
         <p> TODO deadline </p>
-    </Input>
+    </InputComp>
 
     <!-- Edit %  -->
-    <Input>
+    <InputComp>
         <p> TODO % left </p>
-    </Input>
+    </InputComp>
 </div>
 </template>
 
 <script>
-import Input from '@/components/Input'
+import InputComp from '@/components/Input'
 
 export default {
     components: {
-        Input
+        InputComp
     }
 }
 </script>
