@@ -7,15 +7,15 @@
         <div class="flex flex-col content-center content-around" style="margin-bottom: 16vh">
             <!-- rounded dzila tylko poza komponentem, nie wiem czemu -->
             <Author >
-                <img class="rounded-lg" src="@/assets/img/ziemniak.jpg" slot="photo"> 
+                <img class="rounded-lg  h-16 sm:h-20" src="@/assets/img/teletubis_zielony.jpg" slot="photo"> 
                 <p slot="name"> Mariusz Trzeciakiewicz </p>
-                <p slot="description"> Computer science student at TUB </p>
+                <p slot="description"> Computer science student at TU Berlin </p>
             </Author>
 
             <Author>
-                <img class="rounded-lg" src="@/assets/img/ziemniak.jpg" slot="photo">
+                <img class="rounded-lg" src="@/assets/img/teletubis_czerwony.jpg" slot="photo">
                 <p slot="name"> Karol Rogoza </p>
-                <p slot="description"> Computer science student at TUB </p>
+                <p slot="description"> Computer science student at TU Berlin </p>
             </Author>
         </div>
     </div>
