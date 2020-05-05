@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div  >
         <div>
             <h1 class="text-center m-2 font-semibold sm:text-xl md:text-2xl">Welcome!</h1>
             <h2 class="m-2 md:text-2xl sm:text-xl xl:ml-8">This page was created by: </h2>
