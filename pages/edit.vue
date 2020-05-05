@@ -8,17 +8,17 @@
         <br>
     </div>
     <!-- Edit text -->
-    <InputComp>
+    <InputComp placeholderText="Edit TODO text">
         <p > TODO text </p>
     </InputComp>
 
     <!-- Edit TODO deadline -->
-    <InputComp>
+    <InputComp placeholderText="Edit TODO deadline">
         <p> TODO deadline </p>
     </InputComp>
 
     <!-- Edit %  -->
-    <InputComp>
+    <InputComp placeholderText="Edit TODO % left">
         <p> TODO % left </p>
     </InputComp>
 </div>
@@ -26,9 +26,13 @@
 
 <script>
 import InputComp from '@/components/Input'
+import NormalNavbar from '@/components/NormalNavbar'
+import MobileNavbar from '@/components/MobileNavbar'
 
 export default {
     components: {
+        MobileNavbar,
+        NormalNavbar,
         InputComp
     }
 }
