@@ -1,5 +1,5 @@
 <template>
-<div>
+<div >
     <!-- Edit TODO number # -->
     <div>
         Edit TODO #
@@ -8,19 +8,21 @@
         <br>
     </div>
     <!-- Edit text -->
-    <InputComp placeholderText="Edit TODO text">
-        <p > TODO text </p>
-    </InputComp>
+    <div class="flex flex-col sm:items-center md:w-full">
+        <InputComp  placeholderText="Edit TODO text">
+            <p > TODO text </p>
+        </InputComp>
 
-    <!-- Edit TODO deadline -->
-    <InputComp placeholderText="Edit TODO deadline">
-        <p> TODO deadline </p>
-    </InputComp>
+        <!-- Edit TODO deadline -->
+        <InputComp placeholderText="Edit TODO deadline">
+            <p> TODO deadline </p>
+        </InputComp>
 
-    <!-- Edit %  -->
-    <InputComp placeholderText="Edit TODO % left">
-        <p> TODO % left </p>
-    </InputComp>
+        <!-- Edit %  -->
+        <InputComp placeholderText="Edit TODO % left">
+            <p> TODO % left </p>
+        </InputComp>
+    </div>
 </div>
 </template>
 
