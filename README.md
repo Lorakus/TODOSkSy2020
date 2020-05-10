@@ -1,29 +1,8 @@
-# Skalierbare-Systeme_HA1
-
-> HA1
-
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-
-https://nuxtjs.org/faq/github-pages/
 
 
-$ npm run dev
+Working example...
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+https://lorakus.github.io/TODOSkalierbareSysteme2020.github.io/dist/
 
 
 
