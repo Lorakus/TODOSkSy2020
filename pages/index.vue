@@ -3,9 +3,9 @@
     
     <Title title="TODO List" class=""/>
 
-
     <div class="sm:w-max-400px m-auto mb-24">
       <!-- TODOs -->
+
       <Todo todo_name="Put together an epic puzzle." date="05.02.2020"  procent="22 %"/>
       <Todo todo_name="Watch a rom-com marathon." date="06.12.2021"  procent="75 %"/>
       <Todo todo_name="Sing along to some Disney songs." date="06.12.2021"  procent="23 %"/>
@@ -13,6 +13,7 @@
       <Todo todo_name="Write a letter." date="06.12.2021" procent="10 %"/>
       <Todo todo_name="Call a friend." date="06.12.2021" procent="40 %"/>
       <Todo todo_name="Have a dance party." date="06.12.2021" procent="66 %"/>
+
     </div>
   </div>
 </template>
@@ -28,7 +29,7 @@ import Vue from 'vue'
 export default Vue.extend({
   components: {
     Title,
-    Todo
+    Todo,
   }
 })
 </script>

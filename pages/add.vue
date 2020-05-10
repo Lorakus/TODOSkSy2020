@@ -1,15 +1,12 @@
 <template>
     <div class="bg-verdigris h-screen">
       <div class="bg-verdigris py-2">
-
         <Title title="Add New TODO"/>
-
         <div class=" w-full sm:w-max-400px m-auto">
           <div class="flex flex-col mt-2 mx-1 sm:mx-8 mb-12">
 
             <div class="my-2">
               <label for="" class="text-xl text-white">TODO Name:</label>
-
               <input type="text" placeholder="New TODO" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
             </div>
 
@@ -37,7 +34,6 @@
                 add
               </button>
             </div>
-
           </div>
         </div>
         </div>
@@ -68,7 +64,6 @@ export default {
 
 <style>
     @media screen and (-webkit-min-device-pixel-ratio: 0) {
-     
         input[type="range"]::-webkit-slider-thumb {
             width: 15px;
             -webkit-appearance: none;
