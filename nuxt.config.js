@@ -54,6 +54,6 @@ export default {
   },
 
     router: {
-      base: '/TODOSkalierbareSysteme2020.github.io/'
+      base: '/TODOSkalierbareSysteme2020.github.io/dist/'
     }
 }
