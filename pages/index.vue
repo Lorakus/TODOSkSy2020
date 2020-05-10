@@ -5,24 +5,14 @@
 
 
     <div class="sm:w-max-400px m-auto mb-24">
-      <!-- add new TODO input -->
-      <div class="flex mt-6 mx-10 mb-12">
-        <input type="text" placeholder="New TODO" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
-        <input type="text" placeholder="Needed time"  class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2"/>
-        <button class="bg-pale-cerulean hover:bg-blue-500 text-arctic-lime  hover:text-black rounded uppercase py-2 px-6 appearance-none focus:outline-none transform duration-500">
-          add
-        </button>
-      </div>
       <!-- TODOs -->
-      <Todo todo_name="test 1" time="30min"/>
-      <Todo todo_name="test 2" time="60min"/>
-      <Todo todo_name="test 3" time="15min"/>
-      <Todo todo_name="test 4" time="2h"/>
-      <Todo todo_name="test 4" time="2h"/>
-      <Todo todo_name="test 4" time="2h"/>
-      <Todo todo_name="test 4" time="2h"/>
-
-      
+      <Todo todo_name="Put together an epic puzzle." date="05.02.2020"  procent="22 %"/>
+      <Todo todo_name="Watch a rom-com marathon." date="06.12.2021"  procent="75 %"/>
+      <Todo todo_name="Sing along to some Disney songs." date="06.12.2021"  procent="23 %"/>
+      <Todo todo_name="Get a workout in." date="06.12.2021" procent="90 %"/>
+      <Todo todo_name="Write a letter." date="06.12.2021" procent="10 %"/>
+      <Todo todo_name="Call a friend." date="06.12.2021" procent="40 %"/>
+      <Todo todo_name="Have a dance party." date="06.12.2021" procent="66 %"/>
     </div>
   </div>
 </template>
