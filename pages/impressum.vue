@@ -1,7 +1,7 @@
 <template>
     <div  >
         <div>
-            <h1 class="text-center m-2 font-semibold sm:text-xl md:text-2xl">Welcome!</h1>
+            <h1 class=" pt-20 text-center  font-semibold sm:text-xl md:text-2xl">Welcome!</h1>
             <h2 class="m-2 md:text-2xl sm:text-xl xl:ml-8">This page was created by: </h2>
         </div>
         <div class="flex flex-col content-center content-around" style="margin-bottom: 16vh">

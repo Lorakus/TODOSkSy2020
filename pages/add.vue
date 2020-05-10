@@ -22,8 +22,6 @@
               <div class="flex flex-col my-1 text-center ">
                 <label for="" class="text-xl text-white">Deadline:</label>
                 <input type="text" placeholder="date">
-
-
               </div>
 
               <div class="hidden sm:flex ">
