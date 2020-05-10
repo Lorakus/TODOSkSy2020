@@ -21,7 +21,9 @@
             <div class="flex my-2 justify-center mb-3  sm:justify-between ">
               <div class="flex flex-col my-1 text-center ">
                 <label for="" class="text-xl text-white">Deadline:</label>
-                <date-picker v-model="time1" valueType="format"></date-picker>
+                <input type="text" placeholder="date">
+
+
               </div>
 
               <div class="hidden sm:flex ">
@@ -47,13 +49,10 @@
 
 <script>
 import Title from '@/components/Title';
-import DatePicker from 'vue2-datepicker';
-import 'vue2-datepicker/index.css';
 
 export default {
     components:{
         Title,
-        DatePicker,
     },
     data() {
       return {

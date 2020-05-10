@@ -52,8 +52,4 @@ export default {
     extend (config, ctx) {
     }
   },
-
-    router: {
-      base: '/TODOSkalierbareSysteme2020.github.io/dist/'
-    }
 }

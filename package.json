@@ -14,7 +14,7 @@
     "@nuxt/typescript-runtime": "^0.4.0",
     "nuxt": "^2.0.0",
     "tailwindcss": "^1.4.4",
-    "vue2-datepicker": "^3.5.0"
+    "vuejs-datepicker": "^1.6.2"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
