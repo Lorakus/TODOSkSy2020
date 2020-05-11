@@ -7,7 +7,7 @@
 
             <div class="my-2">
               <label for="" class="text-xl text-white">TODO Name:</label>
-              <input type="text" placeholder="New TODO" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
+              <input type="text" maxlength="160" placeholder="New TODO" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
             </div>
 
             <div class="my-2 flex flex-col ">
