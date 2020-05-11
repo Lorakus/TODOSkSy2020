@@ -19,18 +19,14 @@ module.exports = {
         'flame' : '#E4572E',
         'magic-mint' : '#97EAD2',
         'saffron' : '#F9CB40',
-
         'rich-black' : '#093A3E',
         'verdigris' : '#3AAFB9',
         'electric-blue' : '#64E9EE',
         'pale-cerulean' : '#97C8EB',
-        '' : '#',
-
-
-
       }
     }
   },
   variants: {},
-  plugins: []
+  plugins: [],
+  purge: false
 }
