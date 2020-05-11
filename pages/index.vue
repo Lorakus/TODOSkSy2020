@@ -4,8 +4,7 @@
     <Title title="TODO List" class=""/>
 
     <div class="sm:w-max-400px m-auto mb-24">
-      <!-- TODOs -->
-
+      <!--TODO component 3props, todo_name, date, procent -->
       <Todo todo_name="Put together an epic puzzle." date="05.02.2020"  procent="22 %"/>
       <Todo todo_name="Watch a rom-com marathon." date="06.12.2021"  procent="75 %"/>
       <Todo todo_name="Sing along to some Disney songs." date="06.12.2021"  procent="23 %"/>

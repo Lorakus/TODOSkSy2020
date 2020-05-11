@@ -1,14 +1,12 @@
 <template>
     <div class="flex bg-gray-100 rounded py-3 mt-3 justify-between flex-col mx-1 ">
-
-
-
+    <!-- TODO name -->
      <div class=" flex justify-center text-center mb-2 border-gray-300 border-b-2">
             <p class="pl-5 text-lg">{{todo_name}}</p>
     </div>
-
+    
+    <!-- date and procent -->
     <div class="flex flex-row justify-around sm: justify-around order-gray-300 border-b-2 sm:border-b-0">
-
 
         <div>
             <p class="text-blue-500 font-bold">{{date}}</p>
@@ -18,7 +16,7 @@
             <p class="text-green-500 font-bold">{{procent}} done</p>
         </div>
 
-
+        <!-- edit and x button -->
         <div class="ml-2  flex-row justify-center mt-2 sm:mt-0 hidden sm:flex ">
             <nuxt-link to="/edit" class="  rounded ">
             <button class="bg-blue-500 px-3 rounded mr-2">edit</button>
@@ -35,8 +33,6 @@
         </div>
     </div>
 </template>
-
-
 
 <script>
 export default {

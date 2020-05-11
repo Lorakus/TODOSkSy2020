@@ -1,5 +1,6 @@
 <template>
   <div  >
+    <!-- Navbars -->
     <NormalNavbar class="hidden md:grid" />
     <nuxt />
     <MobileNavbar class="md:hidden absolute bottom-0 w-full" style="position: fixed; bottom: 0px" />
@@ -10,7 +11,6 @@
 <script>
 import NormalNavbar from '@/components/NormalNavbar'
 import MobileNavbar from '@/components/MobileNavbar'
-
 
 export default {
   components:{
