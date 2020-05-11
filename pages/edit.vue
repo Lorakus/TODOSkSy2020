@@ -1,12 +1,7 @@
 <template>
-<div >
+<div class="bg-verdigris min-h-screen pt-2 pb-16 ">
     <!-- Edit TODO number # -->
-    <div class="text-center font-bold pt-20">
-        Edit TODO #
-        <br>
-        <br>
-        <br>
-    </div>
+    <Title title="Edit TODO #" />
     <!-- Edit text -->
     <div class="flex flex-col sm:items-center ">
         <InputComp  placeholderText="Edit TODO text">
@@ -30,12 +25,14 @@
 import InputComp from '@/components/Input'
 import NormalNavbar from '@/components/NormalNavbar'
 import MobileNavbar from '@/components/MobileNavbar'
+import Title from '@/components/Title'
 
 export default {
     components: {
         MobileNavbar,
         NormalNavbar,
-        InputComp
+        InputComp,
+        Title
     }
 }
 </script>
