@@ -3,19 +3,19 @@
     <!-- Edit TODO number # -->
     <Title title="Edit TODO #" />
     <!-- Edit text -->
-    <div class="flex flex-col sm:items-center ">
+    <div class="flex flex-col sm:items-center text-white">
         <InputComp  placeholderText="Edit TODO text">
-            <p> TODO text </p>
+            <p class="text-xl"> TODO text </p>
         </InputComp>
 
         <!-- Edit TODO deadline -->
         <InputComp placeholderText="Edit TODO deadline">
-            <p> TODO deadline </p>
+            <p class="text-xl"> TODO deadline </p>
         </InputComp>
 
         <!-- Edit %  -->
         <InputComp placeholderText="Edit TODO % left">
-            <p> TODO % left </p>
+            <p class="text-xl"> TODO % left </p>
         </InputComp>
     </div>
 </div>

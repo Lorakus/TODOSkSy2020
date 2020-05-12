@@ -2,7 +2,7 @@
     <div class= "bg-verdigris min-h-screen pt-2 pb-2" >
         <Title title="Welcome!" />
         <div>
-            <h2 class="m-2 md:text-2xl sm:text-xl xl:ml-8">This page was created by: </h2>
+            <h2 class="m-2 md:text-2xl sm:text-xl xl:ml-8 text-white">This page was created by: </h2>
         </div>
         <div class="flex flex-col content-center content-around" style="margin-bottom: 16vh">
             <!-- rounded dzila tylko poza komponentem, nie wiem czemu -->
