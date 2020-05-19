@@ -5,12 +5,20 @@ use tokio_pg_mapper_derive::PostgresMapper;
 pub struct Status {
     pub status: String
 }
+
 #[derive(Serialize, Deserialize, PostgresMapper)]
-#[pg_mapper(table="todo_item")]
+#[pg_mapper(table = "todo_item")]
 pub struct TodoItem {
     pub id: i32,
+    pub list_id: i32,
     pub title: String,
-    pub procent: i16,
+    pub procent: i32,
     pub date: String,
 }
 
+#[derive(Debug, Serialize, Deserialize, PostgresMapper)]
+#[pg_mapper(table = "todo_list")]
+pub struct TodoList {
+    pub id: i32,
+    pub title: String,
+}
