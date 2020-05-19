@@ -1,26 +1,27 @@
-use actix_web::{Responder, HttpServer, App, web, get};
-use serde::Serialize;
-use std::io::Result;
+mod models;
 
-#[derive(Serialize)]
-struct Status {
-    status: String
-}
+use crate::models::Status;
+use actix_web::{Responder, HttpServer, App, web};
+use std::io;
 
-#[get("/")]
-async fn hello() -> impl Responder {
+
+async fn status() -> impl Responder {
     web::HttpResponse::Ok()
-        .json(Status {status: "Up".to_string()})
+        .json(Status {status: "OK".to_string()})
 }
 
 
 #[actix_rt::main]
-async fn main() -> Result<()> {
-    println!("Starting server at http://127.0.0.1:8081");
-    HttpServer::new(|| App::new() 
-        .service(hello)
-    )
-    .bind("127.0.0.1:8080")?
+async fn main() -> io::Result<()> {
+
+    println!("Starting server at http://127.0.0.1:8080");
+
+    HttpServer::new(||{
+        App::new()
+            .route("/", web::get().to(status))
+        
+    })
+    .bind("127.0.0.1:8081")?
     .run()
     .await
 }
