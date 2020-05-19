@@ -1,44 +1,32 @@
-use crate::models::{TodoList, TodoItem};
+use crate::models::{TodoItem};
 use deadpool_postgres::Client;
 use std::io;
 use tokio_pg_mapper::FromTokioPostgresRow;
 
-pub async fn get_todos(client: &Client) -> Result<Vec<TodoList>, io::Error>{
+pub async fn get_todos(client: &Client) -> Result<Vec<TodoItem>, io::Error>{
 
-    let statement = client.prepare("select * from todo_list order by id desc").await.unwrap();
+    let statement = client.prepare("select * from todo_item order by id desc").await.unwrap();
 
     let todos = client.query(&statement, &[])
         .await
         .expect("ERROR GETTING TODO")
         .iter()
-        .map(|row| TodoList::from_row_ref(row).unwrap())
-        .collect::<Vec<TodoList>>();
+        .map(|row| TodoItem::from_row_ref(row).unwrap())
+        .collect::<Vec<TodoItem>>();
     Ok(todos)
 }
 
+pub async fn create_todo(client: &Client, title: String, procent: i32, deadline: String) -> Result<TodoItem, io::Error>{
 
-pub async fn get_item(client: &Client, list_id: i32) -> Result<Vec<TodoItem>, io::Error> {
-    let statement = client.prepare("select * from todo_item where list_id = $1 order by id").await.unwrap();
-
-    let item = client.query(&statement, &[&list_id])
+    let statement = client.prepare("insert into todo_item (title, procent, deadline) values ($1, $2, $3) returning id, title, procent, deadline").await.unwrap();
+    
+    client.query(&statement,&[&title, &procent, &deadline])
         .await
-        .expect("ERROR GETTING TODO")
+        .expect("error creating new todo")
         .iter()
         .map(|row| TodoItem::from_row_ref(row).unwrap())
-        .collect::<Vec<TodoItem>>();
-    Ok(item)
-} 
-
-pub async fn create_todo(client: &Client, title: String) -> Result<TodoList, io::Error>{
-    let statement = client.prepare("insert into todo_list (title) values ($1) returning id, title").await.unwrap();
-
-    client.query(&statement,&[&title])
-        .await
-        .expect("error creating todo list")
-        .iter()
-        .map(|row| TodoList::from_row_ref(row).unwrap())
-        .collect::<Vec<TodoList>>()
+        .collect::<Vec<TodoItem>>()
         .pop()
-        .ok_or(io::Error::new(io::ErrorKind::Other, "error creatign todo list"))
-        
+        .ok_or(io::Error::new(io::ErrorKind::Other, "error creatign new todo"))
+
 }

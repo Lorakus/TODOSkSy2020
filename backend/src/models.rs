@@ -12,17 +12,18 @@ pub struct TodoItem {
     pub id: i32,
     pub title: String,
     pub procent: i32,
-    pub list_id: i32,
     pub deadline: String,
 }
 
-#[derive(Debug, Serialize, Deserialize, PostgresMapper)]
-#[pg_mapper(table = "todo_list")]
-pub struct TodoList {
-    pub id: i32,
+#[derive(Deserialize)]
+pub struct CreateTodo{
     pub title: String,
+    pub procent: i32,
+    pub deadline: String,
 }
+
 #[derive(Deserialize)]
 pub struct CreateTodoList {
     pub title: String,
 }
+
