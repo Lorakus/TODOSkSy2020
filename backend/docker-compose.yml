@@ -1,0 +1,11 @@
+# https://docs.docker.com/compose/compose-file/
+version: "3.8"
+services: 
+    postgres: postgres:11-alpine
+    restart: always
+    environment: 
+        POSTGRES_PASSWORD: todo
+        POSTGRES_USER: todo
+        POSTGRES_DB: todo
+    ports: 
+        -5432:5432
