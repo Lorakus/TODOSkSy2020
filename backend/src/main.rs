@@ -3,11 +3,11 @@ mod config;
 mod handlers;
 mod db;
 
-// use crate::models::Status;
 use actix_web::{HttpServer, App, web};
 use std::io;
 use dotenv::dotenv;
 use tokio_postgres::NoTls;
+
 use crate::handlers::*;
 
 #[actix_rt::main]
@@ -27,6 +27,7 @@ async fn main() -> io::Result<()> {
             .route("/todos{_:/?}", web::get().to(get_todos))
             .route("/todos{_:/?}", web::post().to(create_todo))
             // .route("/todos/{list_id}/items{_:/?}", web::get().to(get_items))
+            .route("/todos/{id}{_:/?}", web::get().to(get_todo_by_id))
 
     })
     .bind(format!("{}:{}", config.server.host, config.server.port))?
