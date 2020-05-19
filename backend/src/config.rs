@@ -1,7 +1,6 @@
 use serde::Deserialize;
 use config::ConfigError;
 
-
 #[derive(Deserialize)]
 pub struct ServerConfig {
     pub host: String,
@@ -10,7 +9,8 @@ pub struct ServerConfig {
 
 #[derive(Deserialize)]
 pub struct Config {
-    pub server: ServerConfig
+    pub server: ServerConfig,
+    pub pg: deadpool_postgres::Config
 }
 
 impl Config{
