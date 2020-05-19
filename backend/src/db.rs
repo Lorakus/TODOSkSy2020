@@ -28,3 +28,17 @@ pub async fn get_item(client: &Client, list_id: i32) -> Result<Vec<TodoItem>, io
         .collect::<Vec<TodoItem>>();
     Ok(item)
 } 
+
+pub async fn create_todo(client: &Client, title: String) -> Result<TodoList, io::Error>{
+    let statement = client.prepare("insert into todo_list (title) values ($1) returning id, title").await.unwrap();
+
+    client.query(&statement,&[&title])
+        .await
+        .expect("error creating todo list")
+        .iter()
+        .map(|row| TodoList::from_row_ref(row).unwrap())
+        .collect::<Vec<TodoList>>()
+        .pop()
+        .ok_or(io::Error::new(io::ErrorKind::Other, "error creatign todo list"))
+        
+}

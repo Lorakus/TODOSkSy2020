@@ -1,5 +1,7 @@
 
-use crate::models::Status;
+
+
+use crate::models::{Status, CreateTodoList};
 use crate::db;
 use actix_web::{Responder, web, HttpResponse};
 use deadpool_postgres::{Pool, Client};
@@ -34,5 +36,18 @@ pub async fn get_items(db_pool: web::Data<Pool>, path: web::Path<(i32,)>) -> imp
         Ok(items) => HttpResponse::Ok().json(items),
         Err(_) => HttpResponse::InternalServerError().into()
     }
-
 }
+
+
+pub async fn create_todo(db_pool: web::Data<Pool>, json: web::Json<CreateTodoList>) -> impl Responder{
+    let client: Client = 
+        db_pool.get().await.expect("Error geting todo's from DB");
+    let result = db::create_todo(&client,json.title.clone()).await;
+
+    match result {
+        Ok(todo) => HttpResponse::Ok().json(todo),
+        Err(_) => HttpResponse::InternalServerError().into()
+    }
+}
+
+
