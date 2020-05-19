@@ -1,19 +1,26 @@
-use actix_web::{web, App, HttpRequest, HttpServer, Responder};
+use actix_web::{Responder, HttpServer, App, web, get};
+use serde::Serialize;
+use std::io::Result;
 
-async fn greet(req: HttpRequest) -> impl Responder {
-    let name = req.match_info().get("name").unwrap_or("World");
-    format!("Hello {}!", &name)
+#[derive(Serialize)]
+struct Status {
+    status: String
 }
 
+#[get("/")]
+async fn hello() -> impl Responder {
+    web::HttpResponse::Ok()
+        .json(Status {status: "Up".to_string()})
+}
+
+
 #[actix_rt::main]
-async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| {
-        App::new()
-            .route("/", web::get().to(greet))
-            .route("/{name}", web::get().to(greet))
-    })
-    .bind("127.0.0.1:8000")?
+async fn main() -> Result<()> {
+    println!("Starting server at http://127.0.0.1:8081");
+    HttpServer::new(|| App::new() 
+        .service(hello)
+    )
+    .bind("127.0.0.1:8080")?
     .run()
     .await
 }
-
