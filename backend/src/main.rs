@@ -26,9 +26,9 @@ async fn main() -> io::Result<()> {
             .route("/", web::get().to(status))
             .route("/todos{_:/?}", web::get().to(get_todos))
             .route("/todos{_:/?}", web::post().to(create_todo))
-            // .route("/todos/{list_id}/items{_:/?}", web::get().to(get_items))
             .route("/todos/{id}{_:/?}", web::get().to(get_todo_by_id))
-
+            .route("/todos/{id}{_:/?}", web::put().to(edit_todo_by_id))
+            .route("/todos/{id}{_:/?}", web::delete().to(delete_todo))
     })
     .bind(format!("{}:{}", config.server.host, config.server.port))?
     .run()

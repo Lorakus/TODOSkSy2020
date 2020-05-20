@@ -41,7 +41,28 @@ pub async fn get_todo_by_id(client: &Client, id: i32) -> Result<Vec<TodoItem>, i
         .map(|row| TodoItem::from_row_ref(row).unwrap())
         .collect::<Vec<TodoItem>>();
     Ok(item)
+}
+
+pub async fn edit_todo_by_id(client: &Client, id: i32, title: String, procent: i32, deadline: String) -> Result<Vec<TodoItem>, io::Error> {
+    let statement = client.prepare("update todo_item set title = $2,  procent = $3, deadline = $4 where id = $1").await.unwrap();
+
+    let item = client.query(&statement, &[&id, &title, &procent, &deadline])
+        .await
+        .expect("ERROR GETTING TODO")
+        .iter()
+        .map(|row| TodoItem::from_row_ref(row).unwrap())
+        .collect::<Vec<TodoItem>>();
+    Ok(item)
 } 
 
+pub async fn delete_todo(client: &Client, id: i32) -> Result<Vec<TodoItem>, io::Error> {
+    let statement = client.prepare("delete from todo_item where id = $1").await.unwrap();
 
-
+    let item = client.query(&statement, &[&id])
+        .await
+        .expect("ERROR GETTING TODO")
+        .iter()
+        .map(|row| TodoItem::from_row_ref(row).unwrap())
+        .collect::<Vec<TodoItem>>();
+    Ok(item)
+}

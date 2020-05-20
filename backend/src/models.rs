@@ -27,3 +27,10 @@ pub struct CreateTodoList {
     pub title: String,
 }
 
+#[derive(Deserialize)]
+pub struct EditTodo{
+    pub title: String,
+    pub procent: i32,
+    pub deadline: String,
+}
+
