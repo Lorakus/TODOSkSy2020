@@ -4,6 +4,8 @@ docker Compose file:
 how to run docker:
 docker-compose up -d
 
+how to run project:
+cargo run
 
 EndPoints:
 
