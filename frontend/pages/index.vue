@@ -12,7 +12,7 @@
       <Todo todo_name="Write a letter." date="06.12.2021" procent="10 %"/>
       <Todo todo_name="Call a friend." date="06.12.2021" procent="40 %"/>
       <Todo todo_name="Have a dance party." date="06.12.2021" procent="66 %"/>
-
+      
     </div>
   </div>
 </template>
