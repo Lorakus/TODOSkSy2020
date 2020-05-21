@@ -3,6 +3,7 @@
         <div class="w-10 sm:w-16  self-center border-0 mr-4 sm:ml-8  ">
             <slot class="rounded-lg" name="photo"></slot>
         </div>
+
         <div class="flex flex-col content-center sm:justify-center ">
             
             <div class="text-xs mb-2 font-serif sm:text-base ">
@@ -13,5 +14,6 @@
                 <slot name="description"></slot>
             </div>
         </div>
+        
     </div>
 </template>
