@@ -1,38 +1,71 @@
 <template>
 <div class="bg-verdigris min-h-screen pt-2 pb-16 ">
     <!-- Edit TODO number # -->
-    <Title title="Edit TODO #" />
-    <!-- Edit text -->
-    <div class="flex flex-col sm:items-center text-white">
-        <InputComp  :placeholderText="todo_name">
-            <p class="text-xl"> TODO text </p>
-        </InputComp>
+    <Title title="Edit TODO " />
+    
+    <div class="flex flex-col sm:items-center ">
+        
+        <!-- Edit text -->
+        <div class="mb-4 sm:w-3/4 ">
+            <div class="mb-2">
+                <label class="  font-bold text-xl text-white" >
+                    TODO Text
+                </label>
+            </div>
+        <input class=" bg-gray-200  border rounded w-full py-2 px-3 sm:h-16"  v-model="todo.title" >
+      
+        </div>
 
         <!-- Edit TODO deadline -->
-        <InputComp :placeholderText="date">
-            <p class="text-xl"> TODO deadline </p>
-        </InputComp>
+        <div class="mb-4 sm:w-3/4 ">
+            <div class="mb-2">
+                <label class="  font-bold text-xl text-white" >
+                    TODO deadline
+                </label>
+            </div>
+        <input class=" bg-gray-200  border rounded w-full py-2 px-3 sm:h-16" :placeholderText="procent" v-model="todo.deadline" >
+      
+        </div>
 
         <!-- Edit %  -->
-        <InputComp :placeholderText="procent">
-            <p class="text-xl"> TODO % left </p>
-        </InputComp>
+        <div class="mb-4 sm:w-3/4 ">
+            <div class="mb-2">
+                <label class="  font-bold text-xl text-white" >
+                    TODO % left
+                </label>
+            </div>
+        <input class=" bg-gray-200  border rounded w-full py-2 px-3 sm:h-16" :placeholderText="date" v-model="todo.procent" >
+      
+        </div>
+
+        <button @click="saveEditedTodo(todo_name,procent,date,id)"> Save </button>
     </div>
 </div>
 </template>
 
 <script>
-import InputComp from '@/components/Input'
+//import InputComp from '@/components/Input'
 import NormalNavbar from '@/components/NormalNavbar'
 import MobileNavbar from '@/components/MobileNavbar'
 import Title from '@/components/Title'
+
+// import service to make api calls
+import TodoService from '@/services/TodoService'
 
 export default {
     components: {
         MobileNavbar,
         NormalNavbar,
-        InputComp,
         Title
+    },
+    data(){
+        return{
+            todo: {
+                title: String,
+                procent: Number,
+                deadline: String 
+            }
+        }
     },
     props: {
         id: {
@@ -41,7 +74,7 @@ export default {
         },
         todo_name: {
             name: String,
-            //required: true,
+            required: true,
         },
 
         date:{
@@ -49,6 +82,19 @@ export default {
         },
         procent:{
             procent:Number,
+        }
+    },
+    created(){
+        this.todo.title=this.todo_name
+        this.todo.deadline=this.date
+        this.todo.procent=this.procent
+    },
+    methods: {
+        //save edited todo
+        saveEditedTodo: function(){
+           
+           console.log(this.id)
+           TodoService.putTodo(this.todo, this.id)
         }
     }
 

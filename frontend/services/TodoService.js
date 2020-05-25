@@ -13,5 +13,8 @@ const apiClient = axios.create({
 export default {
     getTodos() {
         return apiClient.get('/todos',{withCredentials: true})
+    },
+    putTodo(todo, id) {
+        return apiClient.put('/events', todo)
     }
 }
