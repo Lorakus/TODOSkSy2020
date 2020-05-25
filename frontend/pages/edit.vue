@@ -4,17 +4,17 @@
     <Title title="Edit TODO #" />
     <!-- Edit text -->
     <div class="flex flex-col sm:items-center text-white">
-        <InputComp  placeholderText="Edit TODO text">
+        <InputComp  :placeholderText="todo_name">
             <p class="text-xl"> TODO text </p>
         </InputComp>
 
         <!-- Edit TODO deadline -->
-        <InputComp placeholderText="Edit TODO deadline">
+        <InputComp :placeholderText="date">
             <p class="text-xl"> TODO deadline </p>
         </InputComp>
 
         <!-- Edit %  -->
-        <InputComp placeholderText="Edit TODO % left">
+        <InputComp :placeholderText="procent">
             <p class="text-xl"> TODO % left </p>
         </InputComp>
     </div>
@@ -33,6 +33,24 @@ export default {
         NormalNavbar,
         InputComp,
         Title
+    },
+    props: {
+        id: {
+            id: Number,
+            required: true,
+        },
+        todo_name: {
+            name: String,
+            required: true,
+        },
+
+        date:{
+            date:String,
+        },
+        procent:{
+            procent:Number,
+        }
     }
+
 }
 </script>
