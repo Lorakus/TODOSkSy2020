@@ -1,18 +1,21 @@
 {
 "todos": [
     {
+            "id": 1,
             "title": "cleaning",
-            "procent": "14",
+            "procent": 14,
             "deadline": "Nov 13 2020"
     },
     {
+        "id": 2,
         "title": "walking",
-        "procent": "20",
+        "procent": 20,
         "deadline": "Nov 12 2020"
     },
     {
+        "id": 3,
         "title": "homework",
-        "procent": "30",
+        "procent": 30,
         "deadline": "Nov 14 2020"
     }
   ]

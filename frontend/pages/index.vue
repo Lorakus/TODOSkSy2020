@@ -6,7 +6,7 @@
     <div class="sm:w-max-400px m-auto mb-24">
       <!--TODO component 3props, todo_name, date, procent -->
       
-      <Todo v-for="(todo,idx) in todos" v-bind:key="idx" :todo_name="todo.title" :date="todo.deadline" :procent="todo.procent"/>
+      <Todo v-for="(todo,idx) in todos" v-bind:key="idx" :todo_name="todo.title" :date="todo.deadline" :procent="todo.procent" :id="todo.id"/>
 
       
     </div>

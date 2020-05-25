@@ -37,6 +37,10 @@
 <script>
 export default {
     props: {
+        id: {
+            id: Number,
+            required: true,
+        },
         todo_name: {
             name: String,
             required: true,
