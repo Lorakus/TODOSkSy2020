@@ -41,7 +41,7 @@ export default {
         },
         todo_name: {
             name: String,
-            required: true,
+            //required: true,
         },
 
         date:{

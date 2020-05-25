@@ -16,7 +16,6 @@
 export default {
     props: {
         placeholderText: {
-            type: String,
             required: true
         }
     }

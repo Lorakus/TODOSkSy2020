@@ -18,16 +18,16 @@
 
         <!-- edit and x button -->
         <div class="ml-2  flex-row justify-center mt-2 sm:mt-0 hidden sm:flex ">
-            <nuxt-link to="/edit" class="  rounded ">
-            <button class="bg-blue-500 px-3 rounded mr-2">edit</button>
+            <nuxt-link :to="{ name: 'edit',params: {id:id,todo_name:todo_name, procent:procent, date:date} }" class="  rounded " >
+            <button class="bg-blue-500 px-3 rounded mr-2" >edit</button>
             </nuxt-link>
             <button class="bg-red-600 px-3 rounded mr-2">x</button>
         </div>
 
     </div>
         <div class="ml-2 flex flex-row  justify-evenly mt-2 sm:mt-0 sm:hidden  ">
-            <nuxt-link to="/edit" class="rounded ">
-            <button class="bg-blue-500 px-3 rounded mr-2">edit</button>
+            <nuxt-link :to="{ name: 'edit',params: {id:id,todo_name:todo_name, procent:procent, date:date} }" class="rounded " >
+            <button class="bg-blue-500 px-3 rounded mr-2" >edit</button>
             </nuxt-link>
             <button class="bg-red-600 px-3 rounded mr-2">x</button>
         </div>
