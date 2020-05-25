@@ -19,5 +19,8 @@ export default {
     },
     deleteTodo(id){
         return apiClient.delete('/todos/' + id)
+    },
+    addTodo(todo) {
+        return apiClient.post('/todos', todo)
     }
 }

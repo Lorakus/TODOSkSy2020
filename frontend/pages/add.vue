@@ -11,24 +11,24 @@
             <!-- todo name maxlenght 160 -->
             <div class="my-2">
               <label for="" class="text-xl text-white">TODO Name:</label>
-              <input v-model="title" type="text" maxlength="160" placeholder="New TODO" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
+              <input v-model="todo.title" type="text" maxlength="160" placeholder="New TODO" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
             </div>
 
             <!-- input procent range 1-100% -->
-            <div class="my-2 flex flex-col ">
-                <label for="" class="text-xl text-white">Procent: {{procent}} %</label>
-                <input v-model="procent" type="range" min="0" max="100" step="1" @change="changeProcent" class="rounded-lg overflow-hidden appearance-none bg-gray-400 h-10"/>
+            <div class="my-2">
+              <label for="" class="text-xl text-white">TODO %:</label>
+              <input v-model="todo.procent" type="number" maxlength="160" placeholder="%" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
             </div>
 
             <!-- input date -->
             <div class="flex my-2 justify-center mb-3  sm:justify-between ">
               <div class="flex flex-col my-1 text-center sm:text-left">
                 <label for="" class="text-xl text-white">Deadline:</label>
-                <input v-model="deadline" type="text" placeholder="date: DD/MM/YYYY" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2">
+                <input v-model="todo.deadline" type="text" placeholder="date: DD/MM/YYYY" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2">
               </div>
               <!-- button for PC -->
               <div class="hidden sm:flex ">
-                <button class="my-8 w-64 bg-pale-cerulean hover:bg-blue-500 text-arctic-lime  hover:text-black rounded uppercase py-2 px-6 appearance-none focus:outline-none transform duration-500">
+                <button @click="addTodo" class="my-8 w-64 bg-pale-cerulean hover:bg-blue-500 text-arctic-lime  hover:text-black rounded uppercase py-2 px-6 appearance-none focus:outline-none transform duration-500">
                   add
                 </button>
               </div>
@@ -50,6 +50,8 @@
 <script>
 import Title from '@/components/Title';
 
+import TodoService from '@/services/TodoService'
+
 export default {
     components:{
         Title,
@@ -58,6 +60,12 @@ export default {
       return {
         time1: null,
         procent: 50,
+        todo: {
+          id: 414141413,
+          title: '',
+          procent: '',
+          deadline: ''
+        }
       }
     },
     methods: {
@@ -65,7 +73,10 @@ export default {
             this.$emit('changeProcent', this.procent);
         },
         addTodo(){
-
+          TodoService.addTodo(this.todo)
+          .then(()=>{
+            this.$router.push("/")
+          })
         }
     }
 }

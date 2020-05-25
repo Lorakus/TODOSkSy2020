@@ -96,6 +96,9 @@ export default {
            
            console.log(this.id)
            TodoService.putTodo(this.todo, this.id)
+           .then(()=>{
+            this.$router.push("/")
+          })
         }
     }
 
