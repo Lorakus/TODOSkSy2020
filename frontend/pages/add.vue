@@ -11,7 +11,7 @@
             <!-- todo name maxlenght 160 -->
             <div class="my-2">
               <label for="" class="text-xl text-white">TODO Name:</label>
-              <input type="text" maxlength="160" placeholder="New TODO" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
+              <input v-model="title" type="text" maxlength="160" placeholder="New TODO" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
             </div>
 
             <!-- input procent range 1-100% -->
@@ -24,7 +24,7 @@
             <div class="flex my-2 justify-center mb-3  sm:justify-between ">
               <div class="flex flex-col my-1 text-center sm:text-left">
                 <label for="" class="text-xl text-white">Deadline:</label>
-                <input type="text" placeholder="date: DD/MM/YYYY" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2">
+                <input v-model="deadline" type="text" placeholder="date: DD/MM/YYYY" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2">
               </div>
               <!-- button for PC -->
               <div class="hidden sm:flex ">
@@ -35,7 +35,7 @@
             </div> 
             <!-- button mobile -->
             <div class="flex justify-center sm:hidden">
-              <button class=" w-64 bg-pale-cerulean hover:bg-blue-500 text-arctic-lime  hover:text-black rounded uppercase py-2 px-6 appearance-none focus:outline-none transform duration-500">
+              <button @click="addTodo" class=" w-64 bg-pale-cerulean hover:bg-blue-500 text-arctic-lime  hover:text-black rounded uppercase py-2 px-6 appearance-none focus:outline-none transform duration-500">
                 add
               </button>
             </div>
@@ -63,6 +63,9 @@ export default {
     methods: {
         changeProcent() {
             this.$emit('changeProcent', this.procent);
+        },
+        addTodo(){
+
         }
     }
 }
