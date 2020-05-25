@@ -41,9 +41,6 @@ export default Vue.extend({
     .then(response => {
       this.todos=response.data
     })
-  }, 
-  methods: {
-    
   }
 })
 </script>

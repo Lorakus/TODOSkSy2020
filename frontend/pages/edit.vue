@@ -93,8 +93,6 @@ export default {
     methods: {
         //save edited todo
         saveEditedTodo: function(){
-           
-           console.log(this.id)
            TodoService.putTodo(this.todo, this.id)
            .then(()=>{
             this.$router.push("/")

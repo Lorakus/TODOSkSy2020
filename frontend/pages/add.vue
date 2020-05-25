@@ -61,7 +61,6 @@ export default {
         time1: null,
         procent: 50,
         todo: {
-          id: 414141413,
           title: '',
           procent: '',
           deadline: ''
@@ -74,9 +73,9 @@ export default {
         },
         addTodo(){
           TodoService.addTodo(this.todo)
-          .then(()=>{
-            this.$router.push("/")
-          })
+          // .then(()=>{
+          //   this.$router.push("/")
+          // })
         }
     }
 }
