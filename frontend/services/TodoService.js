@@ -12,9 +12,12 @@ const apiClient = axios.create({
 
 export default {
     getTodos() {
-        return apiClient.get('/todos',{withCredentials: true})
+        return apiClient.get('/todos')
     },
     putTodo(todo, id) {
-        return apiClient.put('/events', todo)
+        return apiClient.put('/todos/' + id, todo)
+    },
+    deleteTodo(id){
+        return apiClient.delete('/todos/' + id)
     }
 }

@@ -21,7 +21,7 @@
             <nuxt-link :to="{ name: 'edit',params: {id:id,todo_name:todo_name, procent:procent, date:date} }" class="  rounded " >
             <button class="bg-blue-500 px-3 rounded mr-2" >edit</button>
             </nuxt-link>
-            <button class="bg-red-600 px-3 rounded mr-2">x</button>
+            <button class="bg-red-600 px-3 rounded mr-2" @click="deleteTodo(id)">x</button>
         </div>
 
     </div>
@@ -29,12 +29,15 @@
             <nuxt-link :to="{ name: 'edit',params: {id:id,todo_name:todo_name, procent:procent, date:date} }" class="rounded " >
             <button class="bg-blue-500 px-3 rounded mr-2" >edit</button>
             </nuxt-link>
-            <button class="bg-red-600 px-3 rounded mr-2">x</button>
+            <button class="bg-red-600 px-3 rounded mr-2" @click="deleteTodo(id)">x</button>
         </div>
     </div>
 </template>
 
 <script>
+// to get api call
+import TodoService from '@/services/TodoService'
+
 export default {
     props: {
         id: {
@@ -51,6 +54,12 @@ export default {
         },
         procent:{
             procent:Number,
+        }
+    },
+    methods: {
+        deleteTodo: function(id){
+            TodoService.deleteTodo(id)
+            window.location.reload(true)
         }
     }
 }

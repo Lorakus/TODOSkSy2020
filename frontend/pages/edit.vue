@@ -23,7 +23,7 @@
                     TODO deadline
                 </label>
             </div>
-        <input class=" bg-gray-200  border rounded w-full py-2 px-3 sm:h-16" :placeholderText="procent" v-model="todo.deadline" >
+        <input class=" bg-gray-200  border rounded w-full py-2 px-3 sm:h-16"  v-model="todo.deadline" >
       
         </div>
 
@@ -34,11 +34,11 @@
                     TODO % left
                 </label>
             </div>
-        <input class=" bg-gray-200  border rounded w-full py-2 px-3 sm:h-16" :placeholderText="date" v-model="todo.procent" >
+        <input class=" bg-gray-200  border rounded w-full py-2 px-3 sm:h-16"  v-model="todo.procent" >
       
         </div>
 
-        <button @click="saveEditedTodo(todo_name,procent,date,id)"> Save </button>
+        <button @click="saveEditedTodo()"> Save </button>
     </div>
 </div>
 </template>
@@ -85,6 +85,7 @@ export default {
         }
     },
     created(){
+        console.log(this.todo)
         this.todo.title=this.todo_name
         this.todo.deadline=this.date
         this.todo.procent=this.procent
