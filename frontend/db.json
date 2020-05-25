@@ -1,0 +1,19 @@
+{
+"todos": [
+    {
+            "title": "cleaning",
+            "procent": "14",
+            "deadline": "Nov 13 2020"
+    },
+    {
+        "title": "walking",
+        "procent": "20",
+        "deadline": "Nov 12 2020"
+    },
+    {
+        "title": "homework",
+        "procent": "30",
+        "deadline": "Nov 14 2020"
+    }
+  ]
+}
