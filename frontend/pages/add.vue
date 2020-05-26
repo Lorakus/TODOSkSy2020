@@ -91,9 +91,8 @@ export default {
       //     }
       //   );
       // alert("pufff");
-      TodoService.addTodo(this.todo).then(() => {
-        this.$router.push("/");
-      });
+      this.todo.procent = Number(this.todo.procent, 10);
+      TodoService.addTodo(this.todo);
     }
   }
 };
