@@ -52,18 +52,19 @@ export default {
     date: {
       date: String
     },
-
     procent: {
       procent: Number
     }
   },
-    methods: {
-      deleteTodo: function(id) {
-        //this.$axios.$delete('http://localhost:3000/todos/'+ id)
-        TodoService.deleteTodo(id);
-        window.location.reload(true);
-      }
+
+  methods: {
+    deleteTodo: function(id) {
+      // this.$axios.$delete("http://localhost:8081/todos/" + id);
+      // this.$router.push("/");
+      TodoService.deleteTodo(id);
+      window.location.reload(true);
     }
+  }
   
-};
+}
 </script>
