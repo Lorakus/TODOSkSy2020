@@ -93,9 +93,8 @@ export default {
 
     saveEditedTodo: function() {
       this.todo.procent = Number(this.todo.procent);
-      TodoService.putTodo(this.todo, this.id).then(() => {
-        this.$router.push("/");
-      });
+      TodoService.putTodo(this.todo, this.id);
+      this.$router.push("/");
     }
   }
 };

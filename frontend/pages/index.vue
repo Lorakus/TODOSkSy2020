@@ -17,31 +17,28 @@
 
 
 <script>
-import Title from '@/components/Title'
-import Todo from '@/components/Todo'
-import Vue from 'vue'
-
+import Title from "@/components/Title";
+import Todo from "@/components/Todo";
+import Vue from "vue";
 
 // import service to make api call
-import TodoService from '@/services/TodoService.js'
+import TodoService from "@/services/TodoService.js";
 
 export default Vue.extend({
   data() {
-    return{
+    return {
       todos: []
-    }
+    };
   },
   components: {
     Title,
-    Todo,
+    Todo
   },
   created() {
-    
-    const response =  TodoService.getTodos()
-    .then(response => {
-      this.todos=response.data
-    })
+    const response = TodoService.getTodos().then(response => {
+      this.todos = response.data;
+    });
   }
-})
+});
 </script>
 

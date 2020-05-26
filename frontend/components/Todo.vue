@@ -53,11 +53,11 @@ export default {
       date: String
     },
     methods: {
-        deleteTodo: function(id){
-            //this.$axios.$delete('http://localhost:3000/todos/'+ id)
-            TodoService.deleteTodo(id)
-            window.location.reload(true)
-        }
+      deleteTodo: function(id) {
+        //this.$axios.$delete('http://localhost:3000/todos/'+ id)
+        TodoService.deleteTodo(id);
+        window.location.reload(true);
+      }
     }
   }
 };
