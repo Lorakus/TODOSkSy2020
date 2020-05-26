@@ -52,6 +52,11 @@ export default {
     date: {
       date: String
     },
+
+    procent: {
+      procent: Number
+    }
+  },
     methods: {
       deleteTodo: function(id) {
         //this.$axios.$delete('http://localhost:3000/todos/'+ id)
@@ -59,6 +64,6 @@ export default {
         window.location.reload(true);
       }
     }
-  }
+  
 };
 </script>

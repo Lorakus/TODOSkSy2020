@@ -17,7 +17,7 @@ export default {
     return await apiClient.put('/todos/' + id, todo)
   },
   async deleteTodo(id) {
-    return await apiClient.delete('/todos/' + id)
+    return apiClient.delete('/todos/' + id)
   },
   async addTodo(todo) {
     return await apiClient.post('/todos', todo)
