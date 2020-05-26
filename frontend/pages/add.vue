@@ -75,22 +75,6 @@ export default {
       this.$emit("changeProcent", this.todo.procent);
     },
     addTodo() {
-      // this.$axios.$get("http://localhost:8081/todos");
-      // this.$axios
-      //   .$put("http://localhost:8081/todos/32", {
-      //     title: this.todo.title,
-      //     procent: this.todo.procent,
-      //     deadline: this.todo.deadline
-      //   })
-      //   .then(
-      //     response => {
-      //       console.log(response);
-      //     },
-      //     error => {
-      //       console.log(error);
-      //     }
-      //   );
-      // alert("pufff");
       this.todo.procent = Number(this.todo.procent, 10);
       TodoService.addTodo(this.todo);
     }
