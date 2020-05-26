@@ -58,8 +58,9 @@ export default {
     },
     methods: {
         deleteTodo: function(id){
-            TodoService.deleteTodo(id)
-            window.location.reload(true)
+            this.$axios.$delete('http://localhost:3000/todos/'+ id)
+            // TodoService.deleteTodo(id)
+            //window.location.reload(true)
         }
     }
 }

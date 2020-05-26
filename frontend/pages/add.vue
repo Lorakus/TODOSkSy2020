@@ -62,7 +62,7 @@ export default {
         procent: 50,
         todo: {
           title: '',
-          procent: '',
+          procent: Number,
           deadline: ''
         }
       }
