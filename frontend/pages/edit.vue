@@ -84,7 +84,6 @@ export default {
     }
   },
   created() {
-    console.log(this.todo);
     this.todo.title = this.todo_name;
     this.todo.deadline = this.date;
     this.todo.procent = this.procent;
