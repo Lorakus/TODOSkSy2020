@@ -52,12 +52,17 @@ export default {
     date: {
       date: String
     },
-    methods: {
-      deleteTodo: function(id) {
-        //this.$axios.$delete('http://localhost:3000/todos/'+ id)
-        TodoService.deleteTodo(id);
-        window.location.reload(true);
-      }
+    procent: {
+      procent: Number
+    }
+  },
+
+  methods: {
+    deleteTodo: function(id) {
+      // this.$axios.$delete("http://localhost:8081/todos/" + id);
+      // this.$router.push("/");
+      TodoService.deleteTodo(id);
+      window.location.reload(true);
     }
   }
 };
