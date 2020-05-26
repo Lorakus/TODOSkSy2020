@@ -10,16 +10,16 @@ const apiClient = axios.create({
 })
 
 export default {
-  getTodos() {
-    return apiClient.get('/todos')
+  async getTodos() {
+    return await apiClient.get('/todos')
   },
-  putTodo(todo, id) {
-    return apiClient.put('/todos/' + id, todo)
+  async putTodo(todo, id) {
+    return await apiClient.put('/todos/' + id, todo)
   },
-  deleteTodo(id) {
-    return apiClient.delete('/todos/' + id)
+  async deleteTodo(id) {
+    return await apiClient.delete('/todos/' + id)
   },
-  addTodo(todo) {
-    return apiClient.post('/todos', todo)
+  async addTodo(todo) {
+    return await apiClient.post('/todos', todo)
   }
 }

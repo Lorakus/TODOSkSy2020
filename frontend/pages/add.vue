@@ -74,9 +74,11 @@ export default {
     changeProcent() {
       this.$emit("changeProcent", this.todo.procent);
     },
+
     addTodo() {
       this.todo.procent = Number(this.todo.procent, 10);
-      TodoService.addTodo(this.todo);
+      TodoService.addTodo(this.todo)
+      this.$router.push("/");
     }
   }
 };

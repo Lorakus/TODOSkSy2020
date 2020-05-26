@@ -58,11 +58,10 @@ export default {
   },
   methods: {
     deleteTodo: function(id) {
-            this.$axios.$delete("http://localhost:8081/todos/" + id);
-
-
+      this.$axios.$delete("http://localhost:8081/todos/" + id);
+      // this.$router.push("/");
       //   TodoService.deleteTodo(id);
-      //   window.location.reload(true);
+      window.location.reload(true);
     }
   }
 };
