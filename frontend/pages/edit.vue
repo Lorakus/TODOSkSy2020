@@ -2,7 +2,6 @@
 <div class="bg-verdigris min-h-screen pt-2 pb-16 ">
     <!-- Edit TODO number # -->
     <Title title="Edit TODO " />
-    
     <div class="flex flex-col sm:items-center ">
         
         <!-- Edit text -->
@@ -45,60 +44,58 @@
 
 <script>
 //import InputComp from '@/components/Input'
-import NormalNavbar from '@/components/NormalNavbar'
-import MobileNavbar from '@/components/MobileNavbar'
-import Title from '@/components/Title'
+import NormalNavbar from "@/components/NormalNavbar";
+import MobileNavbar from "@/components/MobileNavbar";
+import Title from "@/components/Title";
 
 // import service to make api calls
-import TodoService from '@/services/TodoService'
+import TodoService from "@/services/TodoService";
 
 export default {
-    components: {
-        MobileNavbar,
-        NormalNavbar,
-        Title
+  components: {
+    MobileNavbar,
+    NormalNavbar,
+    Title
+  },
+  data() {
+    return {
+      todo: {
+        title: String,
+        procent: Number,
+        deadline: String
+      }
+    };
+  },
+  props: {
+    id: {
+      id: Number,
+      required: true
     },
-    data(){
-        return{
-            todo: {
-                title: String,
-                procent: Number,
-                deadline: String 
-            }
-        }
+    todo_name: {
+      name: String,
+      required: true
     },
-    props: {
-        id: {
-            id: Number,
-            required: true,
-        },
-        todo_name: {
-            name: String,
-            required: true,
-        },
 
-        date:{
-            date:String,
-        },
-        procent:{
-            procent:Number,
-        }
+    date: {
+      date: String
     },
-    created(){
-        console.log(this.todo)
-        this.todo.title=this.todo_name
-        this.todo.deadline=this.date
-        this.todo.procent=this.procent
-    },
-    methods: {
-        //save edited todo
-        saveEditedTodo: function(){
-           TodoService.putTodo(this.todo, this.id)
-           .then(()=>{
-            this.$router.push("/")
-          })
-        }
+    procent: {
+      procent: Number
     }
-
-}
+  },
+  created() {
+    console.log(this.todo);
+    this.todo.title = this.todo_name;
+    this.todo.deadline = this.date;
+    this.todo.procent = this.procent;
+  },
+  methods: {
+    //save edited todo
+    saveEditedTodo: function() {
+      TodoService.putTodo(this.todo, this.id).then(() => {
+        this.$router.push("/");
+      });
+    }
+  }
+};
 </script>

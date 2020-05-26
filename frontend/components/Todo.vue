@@ -36,31 +36,34 @@
 
 <script>
 // to get api call
-import TodoService from '@/services/TodoService'
+import TodoService from "@/services/TodoService";
 
 export default {
-    props: {
-        id: {
-            id: Number,
-            required: true,
-        },
-        todo_name: {
-            name: String,
-            required: true,
-        },
-
-        date:{
-            date:String,
-        },
-        procent:{
-            procent:Number,
-        }
+  props: {
+    id: {
+      id: Number,
+      required: true
     },
-    methods: {
-        deleteTodo: function(id){
-            TodoService.deleteTodo(id)
-            window.location.reload(true)
-        }
+    todo_name: {
+      name: String,
+      required: true
+    },
+
+    date: {
+      date: String
+    },
+    procent: {
+      procent: Number
     }
-}
+  },
+  methods: {
+    deleteTodo: function(id) {
+      alert(id);
+      this.$axios.$delete("http://localhost:8081/todos/" + id);
+
+      //   TodoService.deleteTodo(id);
+      //   window.location.reload(true);
+    }
+  }
+};
 </script>
