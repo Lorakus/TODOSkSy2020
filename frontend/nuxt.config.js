@@ -48,9 +48,11 @@ export default {
     "@nuxtjs/tailwindcss"
   ],
   /*
-   ** Nuxt.js modules
-   */
-  modules: ["@nuxtjs/axios"],
+  ** Nuxt.js modules
+  */
+  modules: [
+    '@nuxtjs/axios',
+  ],
   /*
    ** Build configuration
    */
