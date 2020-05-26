@@ -20,7 +20,7 @@
               <input v-model="todo.procent" type="number" maxlength="160" placeholder="%" id="todo-input" class="shadow appearance-none border rounded w-full py-2 px-6 mr-2 text-gray-700 leading-tight focus:outline-none  focus:shadow-outline-arctic-lime px-2" />
             </div> -->
             <div class="my-2 flex flex-col ">
-                <label for="" class="text-xl text-white">Procent: {{procent}} %</label>
+                <label for="" class="text-xl text-white">Procent: {{todo.procent}} %</label>
                 <input v-model="todo.procent" type="range" min="0" max="100" step="1" @change="changeProcent" class="rounded-lg overflow-hidden appearance-none bg-gray-400 h-10"/>
             </div>
             <!-- input date -->
