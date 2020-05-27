@@ -1,6 +1,12 @@
-to ru frontend
+# FRONTEND: 
 
-    1. npm run dev
-    2. open .nuxt/router.js
-    3. add props: true to /edit route
-    4. save
+# Installation: 
+- install NodeJS (npm)
+- install npx ( npx is shipped by default since NPM 5.2.0 )
+
+
+# Run
+- npm install
+- npm build
+- npm run dev
+
